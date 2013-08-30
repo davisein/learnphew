@@ -57,8 +57,8 @@ app.fn 'list.remove', (e) ->
 
 app.fn 'editor.run', (model)->
   muu.cleanAll()
-  roo1 = muu.addCanvas "canvas1", false
-  roo2 = muu.addCanvas "canvas2", true
+  roo1 = muu.addAtlas "canvas1", false
+  roo2 = muu.addAtlas "canvas2", false
   muu.addAtlas "img/atlas2.png", "img/atlas2.js"
   stop = ->
     app.stopp = true
@@ -66,7 +66,7 @@ app.fn 'editor.run', (model)->
     $(".canv").css "z-index", "0"
     $("#ide").css "opacity", "1"
 
-  mask = roo1:roo1, roo2:roo2
+  var mask = roo1:roo1, roo2:roo2
 
   render = (t)->
     if !app.stopp
@@ -78,9 +78,6 @@ app.fn 'editor.run', (model)->
       requestAnimationFrame render
 
   muu.whenReady ->
-    code = "with(this){"
-    code += CoffeeScript.compile editor.getValue(), bare: true
-    code += "}"
-    (new Function code).call mask
+    (new Function "with(this){"+CoffeeScript.compile editor.getValue(), bare: true +"}").call mask
     app.first = true
     requestAnimationFrame render
