@@ -1,0 +1,18 @@
+<Body:>
+        <div class="container">
+
+            <canvas id="canvas1" class="canv" width=800 height=600 style="position:absolute; z-index:10; pointer-events:none"></canvas>
+            <canvas id="canvas2" class="canv" width=800 height=600 style="position:absolute; z-index:11; pointer-events:none"></canvas>
+
+            <div id="ide" style="z-index:0">
+                <textarea id="code">
+                    ball = new Circle(33).fill "#ff00ff"
+                    roo2.add ball
+                    @render = (t) ->
+                      ball.moveTo 200+t/150, 200+t/100
+                </textarea>
+            </div>
+        </div> <!-- /container -->
+
+<Title:>
+    Editor
