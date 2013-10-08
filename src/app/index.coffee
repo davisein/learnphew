@@ -30,17 +30,27 @@ app.get '/list', (page, model, params, next) ->
     user.increment 'visits'
     page.render 'list'
 
-app.get '/editor', (page) ->
-    page.render 'editor'
-app.ready  (page, model) ->
-    window.editor = CodeMirror.fromTextArea document.getElementById "code",
-        mode: "coffeescript"
-        styleActiveLine: true
-        lineNumbers: true
-        lineWrapping: true
-        height: "600px"
-    #model.set '_page.editor', window.editor
-    window.editor.setSize "800px", "600px"
+app.get '/editor', (page, model) ->
+  page.render 'editor'
+app.ready  (model) ->
+  model.subscribe "code", ->
+    console.log model.get()
+  window.editor = CodeMirror.fromTextArea document.getElementById "code",
+    mode: "coffeescript"
+    styleActiveLine: true
+    lineNumbers: true
+    lineWrapping: true
+    height: "600px"
+  #model.set '_page.editor', window.editor
+  window.editor.setSize "800px", "600px"
+  window.editor.on "change", (instance, chang) ->
+    #model.stringRemove "code.now.code", chang.from, chang.to
+    #model.stringInsert "code.now.code", chang.from, chang.text
+    #console.log model.get()
+    model.set "code.now.code", window.editor.getValue()
+  model.on "change", "code.now.code", (captures, value) ->
+    window.editor.setValue value if value isnt window.editor.getValue()
+  console.log model.get()
 
 
 # CONTROLLER FUNCTIONS #
@@ -56,18 +66,20 @@ app.fn 'list.remove', (e) ->
   @model.del 'items.' + item.id
 
 app.fn 'editor.run', (model)->
-  muu.cleanAll()
+  app.onrun = !app.onrun
+  if app.onrun then app.setupnrun() else app.stop()
+
+app.setupnrun = (model)->
+  $("#runbutton").removeClass "glyphicon-play-circle"
+  $("#runbutton").addClass "glyphicon-stop"
+  $(".canv").css "opacity", "1"
+  $(".canv").css "z-index", "1"
+  $("#ide").css "opacity", "0.5"
   roo1 = muu.addCanvas "canvas1", false
   roo2 = muu.addCanvas "canvas2", true
   muu.addAtlas "img/atlas2.png", "img/atlas2.js"
-  stop = ->
-    app.stopp = true
-    $(".canv").css "opacity", "0.5"
-    $(".canv").css "z-index", "0"
-    $("#ide").css "opacity", "1"
-
   mask = roo1:roo1, roo2:roo2
-
+  app.stopp = false
   render = (t)->
     if !app.stopp
       if app.first
@@ -84,3 +96,12 @@ app.fn 'editor.run', (model)->
     (new Function code).call mask
     app.first = true
     requestAnimationFrame render
+
+app.stop = (model)->
+  muu.cleanAll()
+  app.stopp = true
+  $("#runbutton").removeClass "glyphicon-stop"
+  $("#runbutton").addClass "glyphicon-play-circle"
+  $(".canv").css "opacity", "0.5"
+  $(".canv").css "z-index", "0"
+  $("#ide").css "opacity", "1"
