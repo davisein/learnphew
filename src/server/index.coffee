@@ -2,10 +2,13 @@ express = require 'express'
 derby = require 'derby'
 racerBrowserChannel = require 'racer-browserchannel'
 liveDbMongo = require 'livedb-mongo'
+mongoskin = require 'mongoskin' 
 coffeeify = require 'coffeeify'
 MongoStore = require('connect-mongo')(express)
 app = require '../app/index.coffee'
 error = require './error.coffee'
+#conf = require 'nconf'
+#conf.env().argv().file('devel.json')
 
 expressApp = module.exports = express()
 
@@ -23,15 +26,79 @@ redis.select process.env.REDIS_DB || 1
 # Get Mongo configuration 
 mongoUrl = process.env.MONGO_URL || process.env.MONGOHQ_URL ||
   'mongodb://localhost:27017/project'
+mongo = mongoskin.db "#{mongoUrl}?auto_reconnect", {safe: true}
 
 # The store creates models and syncs data
 store = derby.createStore
-  db: liveDbMongo(mongoUrl + '?auto_reconnect', safe: true)
+  db: liveDbMongo(mongo)
   redis: redis
 
 store.on 'bundle', (browserify) ->
   # Add support for directly requiring coffeescript in browserify bundles
   browserify.transform coffeeify
+
+### Auth support
+(1)
+Setup a hash of strategies you'll use - strategy objects and their configurations
+Note, API keys should be stored as environment variables (eg, process.env.FACEBOOK_KEY) or you can use nconf to store
+them in config.json, which we're doing here
+###
+auth = require("derby-auth") # change to `require('derby-auth')` in your project
+strategies =
+  facebook:
+    strategy: require("passport-facebook").Strategy
+    conf:
+      clientID: process.env.FACEBOOK_API_ID || 'YOUR_ID'
+      clientSecret: process.env.FACEBOOK_API_SECRET || 'YOUR_SECRET'
+
+  #linkedin:
+    #strategy: require("passport-linkedin").Strategy
+    #conf:
+      #consumerKey: conf.get('linkedin:apiKey')
+      #consumerSecret: conf.get('linkedin:apiSecret')
+
+  #github:
+    #strategy: require("passport-github").Strategy
+    #conf:
+      #clientID: conf.get('github:appId')
+      #clientSecret: conf.get('github:appSecret')
+      ## You can optionally pass in per-strategy configuration options (consult Passport documentation)
+      #callbackURL: "http://127.0.0.1:3000/auth/github/callback"
+
+  #twitter:
+    #strategy: require("passport-twitter").Strategy
+    #conf:
+      #consumerKey: conf.get('twit:consumerKey')
+      #consumerSecret: conf.get('twit:consumerSecret')
+      #callbackURL: "http://127.0.0.1:3000/auth/twitter/callback"
+
+###
+(1.5)
+Optional parameters passed into auth.middleware(). Most of these will get sane defaults, so it's not entirely necessary
+to pass in this object - but I want to show you here to give you a feel. @see derby-auth/middeware.coffee for options
+###
+options =
+  passport:
+    failureRedirect: '/'
+    successRedirect: '/'
+    #usernameField: 'email'
+  site:
+    domain: 'http://localhost:3000'
+    name: 'My Site'
+    email: 'admin@mysite.com'
+  smtp:
+    service: 'Gmail'
+    user: 'admin@mysite.com'
+    pass: 'abc'
+
+###
+(2)
+Initialize the store. This will add utility accessControl functions (see store.coffee for more details), as well
+as the basic specific accessControl for the `auth` collection, which you can use as boilerplate for your own `users`
+collection or what have you.
+###
+auth.store(store, mongo, strategies)
+
 
 createUserId = (req, res, next) ->
   model = req.getModel()
@@ -55,8 +122,8 @@ expressApp
   .use(store.modelMiddleware())
 
   # Parse form data
-  # .use(express.bodyParser())
-  # .use(express.methodOverride())
+   .use(express.bodyParser())
+   .use(express.methodOverride())
 
   # Session middleware
   .use(express.cookieParser())
@@ -65,7 +132,10 @@ expressApp
     store: new MongoStore(url: mongoUrl, safe: true)
   )
   .use(createUserId)
-
+  # (3)
+  # derbyAuth.middleware is inserted after modelMiddleware and before the app router to pass server accessible data to a model
+  # Pass in {store} (sets up accessControl & queries), {strategies} (see above), and options
+  .use(auth.middleware(strategies, options))
   # Create an express middleware from the app's routes
   .use(app.router())
   .use(expressApp.router)

@@ -1,14 +1,25 @@
 <Body:>
         <div class="container">
+            <form x-bind="submit: world.add">
+            <!--<fieldset>-->
+                <label>Name</label>
+                <input type="text" value={_page.newWorld.name}>
+                <label>Note</label>
+                <textarea>{_page.newWorld.note}</textarea>
+                <div>
+                  <button type="submit" class="btn">Add</button>
+                </div>
+              <!--</fieldset>-->
 
             <canvas id="canvas1" class="canv" width=800 height=600 style="position:absolute; z-index:10; pointer-events:none"></canvas>
             <canvas id="canvas2" class="canv" width=800 height=600 style="position:absolute; z-index:11; pointer-events:none"></canvas>
 
             <div id="ide" style="z-index:0">
                 <textarea id="code">
-                    {code}
+                    {_page.newWorld.code}
                 </textarea>
             </div>
+            </form>
         </div> <!-- /container -->
 
 <Title:>

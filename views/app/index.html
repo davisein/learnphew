@@ -1,6 +1,8 @@
 <import: src="./home">
 <import: src="./list">
+<import: src="./worlds">
 <import: src="./editor">
+<import: src="./login">
 
 <!--
   Derby templates are similar to Handlebars, except that they are first
@@ -36,15 +38,21 @@
         <ul class="nav navbar-nav">
             <app:navLink title="Home" href="/">
             <app:navLink title="List" href="/list">
+            <app:navLink title="Worlds" href="/worlds">
             <app:navLink title="Editor" href="/editor">
         </ul>
+        <ul class="nav navbar-nav navbar-right">
             {{#if equal($url, '/editor')}}
-                <ul class="nav navbar-nav navbar-right">
                     <button type="button" id="run" x-bind="click: editor.run" class="btn btn-default navbar-btn">
                         <span id="runbutton" class="glyphicon glyphicon-play-circle">
                     </button>
-                </ul>
             {{/}}
+            {{#if _session.loggedIn}}
+                <app:navLink title="Logout" href="/logout" class="pull-right">
+            {{else}}
+                <app:navLink title="Login" href="/login" class="pull-right">
+            {{/}}
+        </ul>
     </div>
   </nav>
   <div class="content" style="padding-top: 70px">
@@ -79,5 +87,5 @@
   {{else}}
   <li>
   {{/}}
-    <a href="{{@href}}">{{@title}}</a>
+    <a class={{@class}} href="{{@href}}">{{@title}}</a>
   </li>

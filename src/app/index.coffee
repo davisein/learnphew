@@ -1,6 +1,7 @@
 app = require('derby').createApp(module)
   .use(require 'derby-ui-boot')
   .use(require '../../ui/index.coffee')
+  .use(require "derby-auth/components/index.coffee")
 
 
 # ROUTES #
@@ -8,6 +9,14 @@ app = require('derby').createApp(module)
 # Derby routes are rendered on the client and the server
 app.get '/', (page) ->
   page.render 'home'
+
+app.get '/login', (page, model, params, next) ->
+  $user = model.at "auths.#{model.get("_session.userId")}"
+  $user.subscribe (err) ->
+    throw err if err
+    model.ref "_page.user", $user
+    page.render 'login'
+  #page.render 'login'
 
 app.get '/list', (page, model, params, next) ->
   # This value is set on the server in the `createUserId` middleware
@@ -29,6 +38,28 @@ app.get '/list', (page, model, params, next) ->
 
     user.increment 'visits'
     page.render 'list'
+
+app.get '/worlds', (page, model, params, next) ->
+  # This value is set on the server in the `createUserId` middleware
+  userId = model.get '_session.userId'
+
+  # Create a scoped model, which sets the base path for all model methods
+  user = model.at 'users.' + userId
+
+  # Create a mongo query that gets the current user's items
+  myWorldsQuery = model.query 'world', {userId}
+  otherWorldsQuery = model.query 'world', {'*', $limit: 50}
+
+  # Get the inital data and subscribe to any updates
+  model.subscribe user, myWorldsQuery, (err) ->
+    return next err if err
+    model.subscribe user, otherWorldsQuery, (err) ->
+        # Create references that can be used in templates or controller methods
+        model.ref '_page.user', user
+        myWorldsQuery.ref '_page.worlds'
+        otherWorldsQuery.ref '_page.other_worlds'
+        page.render 'worlds'
+
 
 app.get '/editor', (page, model) ->
   page.render 'editor'
@@ -54,6 +85,16 @@ app.ready  (model) ->
 
 
 # CONTROLLER FUNCTIONS #
+app.fn 'world.add', (e, el) ->
+  newWorld = @model.del '_page.newworld'
+  return unless newworld
+  newWorld.userId = @model.get '_session.userId'
+  @model.add 'items', newWorld
+
+app.fn 'world.remove', (e) ->
+  world = e.get ':world'
+  @model.del 'world.' + world.id
+
 
 app.fn 'list.add', (e, el) ->
   newItem = @model.del '_page.newItem'
