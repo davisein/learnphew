@@ -1,0 +1,51 @@
+{
+"ballblue":{
+    "size":{"x": 50,"y": 50},
+    "position":{"x":5, "y":5}
+}, 
+
+"ballbrown":{
+    "size":{"x": 50,"y": 50},
+    "position":{"x":65, "y":5}
+}, 
+
+"ballcyan":{
+    "size":{"x": 50,"y": 50},
+    "position":{"x":125, "y":5}
+}, 
+
+"ballgreen":{
+    "size":{"x": 51,"y": 51},
+    "position":{"x":5, "y":65}
+}, 
+
+"ballorange":{
+    "size":{"x": 50,"y": 50},
+    "position":{"x":66, "y":65}
+}, 
+
+"ballpink":{
+    "size":{"x": 50,"y": 50},
+    "position":{"x":126, "y":65}
+}, 
+
+"ballpurple":{
+    "size":{"x": 50,"y": 50},
+    "position":{"x":66, "y":125}
+}, 
+
+"ballred":{
+    "size":{"x": 50,"y": 50},
+    "position":{"x":126, "y":125}
+}, 
+
+"ballwhite":{
+    "size":{"x": 50,"y": 49},
+    "position":{"x":185, "y":5}
+}, 
+
+"ballyellow":{
+    "size":{"x": 50,"y": 50},
+    "position":{"x":186, "y":64}
+}
+}

@@ -1,0 +1,861 @@
+{
+"hill_small":{
+    "size":{"x": 48,"y": 106},
+    "position":{"x":5, "y":5}
+}, 
+
+"box":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":63, "y":5}
+}, 
+
+"hill_smallAlt":{
+    "size":{"x": 48,"y": 106},
+    "position":{"x":143, "y":5}
+}, 
+
+"boxCoin":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":201, "y":5}
+}, 
+
+"boxAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":281, "y":5}
+}, 
+
+"ladder_mid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":361, "y":5}
+}, 
+
+"boxCoin_disabled":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":441, "y":5}
+}, 
+
+"boxCoinAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":521, "y":5}
+}, 
+
+"boxCoinAlt_disabled":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":601, "y":5}
+}, 
+
+"liquidLava":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":681, "y":5}
+}, 
+
+"boxExplosive_disabled":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":761, "y":5}
+}, 
+
+"boxEmpty":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":841, "y":5}
+}, 
+
+"boxExplosive":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":921, "y":5}
+}, 
+
+"boxExplosiveAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":63, "y":85}
+}, 
+
+"liquidWater":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":201, "y":85}
+}, 
+
+"boxWarning":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":281, "y":85}
+}, 
+
+"boxItem":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":361, "y":85}
+}, 
+
+"boxItemAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":441, "y":85}
+}, 
+
+"boxItemAlt_disabled":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":521, "y":85}
+}, 
+
+"boxItem_disabled":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":601, "y":85}
+}, 
+
+"lock_blue":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":681, "y":85}
+}, 
+
+"castleCenter_rounded":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":761, "y":85}
+}, 
+
+"brickWall":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":841, "y":85}
+}, 
+
+"bridge":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":921, "y":85}
+}, 
+
+"bridgeLogs":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":165}
+}, 
+
+"castle":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":165}
+}, 
+
+"castleCenter":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":165, "y":165}
+}, 
+
+"lock_yellow":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":245, "y":165}
+}, 
+
+"castleHalfMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":325, "y":165}
+}, 
+
+"castleCliffLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":405, "y":165}
+}, 
+
+"castleCliffLeftAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":485, "y":165}
+}, 
+
+"castleCliffRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":565, "y":165}
+}, 
+
+"castleCliffRightAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":645, "y":165}
+}, 
+
+"castleHalf":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":725, "y":165}
+}, 
+
+"castleHalfLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":805, "y":165}
+}, 
+
+"ropeHorizontal":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":885, "y":165}
+}, 
+
+"castleLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":245}
+}, 
+
+"castleHalfRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":245}
+}, 
+
+"castleHillLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":165, "y":245}
+}, 
+
+"castleHillLeft2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":245, "y":245}
+}, 
+
+"castleHillRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":325, "y":245}
+}, 
+
+"castleHillRight2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":405, "y":245}
+}, 
+
+"castleLedgeLeft":{
+    "size":{"x": 5,"y": 22},
+    "position":{"x":1001, "y":5}
+}, 
+
+"castleLedgeRight":{
+    "size":{"x": 5,"y": 22},
+    "position":{"x":1001, "y":37}
+}, 
+
+"sandCliffLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":485, "y":245}
+}, 
+
+"dirtCliffRightAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":565, "y":245}
+}, 
+
+"castleMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":645, "y":245}
+}, 
+
+"castleRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":725, "y":245}
+}, 
+
+"dirt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":805, "y":245}
+}, 
+
+"dirtCenter":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":885, "y":245}
+}, 
+
+"dirtCenter_rounded":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":325}
+}, 
+
+"dirtCliffLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":325}
+}, 
+
+"dirtCliffLeftAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":165, "y":325}
+}, 
+
+"dirtCliffRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":245, "y":325}
+}, 
+
+"sandHalfLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":325, "y":325}
+}, 
+
+"dirtLedgeRight":{
+    "size":{"x": 5,"y": 18},
+    "position":{"x":1001, "y":69}
+}, 
+
+"dirtHalf":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":405, "y":325}
+}, 
+
+"dirtHalfLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":485, "y":325}
+}, 
+
+"dirtHalfMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":565, "y":325}
+}, 
+
+"dirtHalfRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":645, "y":325}
+}, 
+
+"dirtHillLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":725, "y":325}
+}, 
+
+"dirtHillLeft2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":805, "y":325}
+}, 
+
+"dirtHillRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":885, "y":325}
+}, 
+
+"dirtHillRight2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":405}
+}, 
+
+"dirtLedgeLeft":{
+    "size":{"x": 5,"y": 18},
+    "position":{"x":1001, "y":97}
+}, 
+
+"sandHillRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":405}
+}, 
+
+"grassCenter":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":165, "y":405}
+}, 
+
+"dirtLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":245, "y":405}
+}, 
+
+"dirtMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":325, "y":405}
+}, 
+
+"dirtRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":405, "y":405}
+}, 
+
+"door_closedMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":485, "y":405}
+}, 
+
+"door_closedTop":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":565, "y":405}
+}, 
+
+"door_openMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":645, "y":405}
+}, 
+
+"door_openTop":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":725, "y":405}
+}, 
+
+"fence":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":805, "y":405}
+}, 
+
+"fenceBroken":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":885, "y":405}
+}, 
+
+"grass":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":485}
+}, 
+
+"sandRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":485}
+}, 
+
+"grassHillRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":165, "y":485}
+}, 
+
+"grassCenter_rounded":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":245, "y":485}
+}, 
+
+"grassCliffLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":325, "y":485}
+}, 
+
+"grassCliffLeftAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":405, "y":485}
+}, 
+
+"grassCliffRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":485, "y":485}
+}, 
+
+"grassCliffRightAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":565, "y":485}
+}, 
+
+"grassHalf":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":645, "y":485}
+}, 
+
+"grassHalfLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":725, "y":485}
+}, 
+
+"grassHillLeft2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":805, "y":485}
+}, 
+
+"grassHillLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":885, "y":485}
+}, 
+
+"grassHalfRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":565}
+}, 
+
+"grassHalfMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":565}
+}, 
+
+"snowCenter_rounded":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":165, "y":565}
+}, 
+
+"ladder_top":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":245, "y":565}
+}, 
+
+"grassHillRight2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":325, "y":565}
+}, 
+
+"hill_largeAlt":{
+    "size":{"x": 48,"y": 146},
+    "position":{"x":965, "y":165}
+}, 
+
+"grassLedgeLeft":{
+    "size":{"x": 5,"y": 24},
+    "position":{"x":5, "y":125}
+}, 
+
+"grassLedgeRight":{
+    "size":{"x": 5,"y": 24},
+    "position":{"x":20, "y":125}
+}, 
+
+"hill_large":{
+    "size":{"x": 48,"y": 146},
+    "position":{"x":965, "y":321}
+}, 
+
+"grassLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":405, "y":565}
+}, 
+
+"grassMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":485, "y":565}
+}, 
+
+"grassRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":565, "y":565}
+}, 
+
+"snowHalf":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":645, "y":565}
+}, 
+
+"rockHillLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":725, "y":565}
+}, 
+
+"liquidLavaTop":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":805, "y":565}
+}, 
+
+"lock_red":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":885, "y":565}
+}, 
+
+"liquidLavaTop_mid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":645}
+}, 
+
+"liquidWaterTop":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":645}
+}, 
+
+"liquidWaterTop_mid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":165, "y":645}
+}, 
+
+"lock_green":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":245, "y":645}
+}, 
+
+"snowHillLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":325, "y":645}
+}, 
+
+"sandCenter_rounded":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":405, "y":645}
+}, 
+
+"rockHillRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":485, "y":645}
+}, 
+
+"ropeAttached":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":565, "y":645}
+}, 
+
+"ropeVertical":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":645, "y":645}
+}, 
+
+"sandCenter":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":725, "y":645}
+}, 
+
+"sand":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":805, "y":645}
+}, 
+
+"snowHillRight2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":885, "y":645}
+}, 
+
+"sandHalfRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":725}
+}, 
+
+"sandCliffLeftAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":725}
+}, 
+
+"sandHalfMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":165, "y":725}
+}, 
+
+"sandCliffRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":245, "y":725}
+}, 
+
+"sandCliffRightAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":325, "y":725}
+}, 
+
+"sandHalf":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":405, "y":725}
+}, 
+
+"snowMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":485, "y":725}
+}, 
+
+"sandLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":565, "y":725}
+}, 
+
+"sandLedgeRight":{
+    "size":{"x": 5,"y": 18},
+    "position":{"x":35, "y":125}
+}, 
+
+"sandHillLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":645, "y":725}
+}, 
+
+"sandHillLeft2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":725, "y":725}
+}, 
+
+"sandHillRight2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":805, "y":725}
+}, 
+
+"sandLedgeLeft":{
+    "size":{"x": 5,"y": 18},
+    "position":{"x":143, "y":125}
+}, 
+
+"stoneCenter":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":885, "y":725}
+}, 
+
+"snow":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":805}
+}, 
+
+"signRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":805}
+}, 
+
+"sandMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":165, "y":805}
+}, 
+
+"sign":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":245, "y":805}
+}, 
+
+"signExit":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":325, "y":805}
+}, 
+
+"signLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":405, "y":805}
+}, 
+
+"stoneCliffRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":485, "y":805}
+}, 
+
+"snowCliffRightAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":565, "y":805}
+}, 
+
+"snowCenter":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":645, "y":805}
+}, 
+
+"snowCliffLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":725, "y":805}
+}, 
+
+"snowCliffRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":805, "y":805}
+}, 
+
+"snowCliffLeftAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":885, "y":805}
+}, 
+
+"stoneHalfLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":885}
+}, 
+
+"snowHillRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":885}
+}, 
+
+"snowHillLeft2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":165, "y":885}
+}, 
+
+"snowHalfLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":245, "y":885}
+}, 
+
+"snowHalfMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":325, "y":885}
+}, 
+
+"snowHalfRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":405, "y":885}
+}, 
+
+"stoneHillLeft2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":485, "y":885}
+}, 
+
+"snowRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":565, "y":885}
+}, 
+
+"snowLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":645, "y":885}
+}, 
+
+"snowLedgeLeft":{
+    "size":{"x": 5,"y": 18},
+    "position":{"x":158, "y":125}
+}, 
+
+"snowLedgeRight":{
+    "size":{"x": 5,"y": 18},
+    "position":{"x":173, "y":125}
+}, 
+
+"stoneLedgeLeft":{
+    "size":{"x": 5,"y": 24},
+    "position":{"x":1001, "y":125}
+}, 
+
+"stoneCliffLeftAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":725, "y":885}
+}, 
+
+"stoneCliffLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":805, "y":885}
+}, 
+
+"stone":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":885, "y":885}
+}, 
+
+"stoneCenter_rounded":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":1016, "y":5}
+}, 
+
+"stoneMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":1016, "y":85}
+}, 
+
+"stoneHalfMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":1023, "y":165}
+}, 
+
+"stoneHalf":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":1023, "y":245}
+}, 
+
+"stoneCliffRightAlt":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":1023, "y":325}
+}, 
+
+"stoneHalfRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":1023, "y":405}
+}, 
+
+"stoneHillRight2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":965, "y":485}
+}, 
+
+"stoneLedgeRight":{
+    "size":{"x": 5,"y": 24},
+    "position":{"x":1045, "y":485}
+}, 
+
+"stoneLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":965, "y":565}
+}, 
+
+"stoneRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":965, "y":645}
+}, 
+
+"stoneWall":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":965, "y":725}
+}, 
+
+"tochLit":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":965, "y":805}
+}, 
+
+"tochLit2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":965, "y":885}
+}, 
+
+"torch":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":965}
+}, 
+
+"window":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":965}
+}
+}
