@@ -1,0 +1,241 @@
+{
+"p2_walk04":{
+    "size":{"x": 70,"y": 94},
+    "position":{"x":5, "y":5}
+}, 
+
+"p1_duck":{
+    "size":{"x": 69,"y": 71},
+    "position":{"x":85, "y":5}
+}, 
+
+"p2_walk05":{
+    "size":{"x": 70,"y": 94},
+    "position":{"x":164, "y":5}
+}, 
+
+"p1_hurt":{
+    "size":{"x": 69,"y": 92},
+    "position":{"x":244, "y":5}
+}, 
+
+"p1_front":{
+    "size":{"x": 66,"y": 92},
+    "position":{"x":323, "y":5}
+}, 
+
+"p2_walk06":{
+    "size":{"x": 70,"y": 94},
+    "position":{"x":399, "y":5}
+}, 
+
+"p1_walk01":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":479, "y":5}
+}, 
+
+"p1_jump":{
+    "size":{"x": 67,"y": 94},
+    "position":{"x":5, "y":112}
+}, 
+
+"p1_stand":{
+    "size":{"x": 66,"y": 92},
+    "position":{"x":82, "y":112}
+}, 
+
+"p2_walk08":{
+    "size":{"x": 70,"y": 94},
+    "position":{"x":158, "y":112}
+}, 
+
+"p1_walk05":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":238, "y":112}
+}, 
+
+"p1_walk02":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":320, "y":112}
+}, 
+
+"p1_walk03":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":402, "y":112}
+}, 
+
+"p1_walk04":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":484, "y":112}
+}, 
+
+"p2_walk11":{
+    "size":{"x": 70,"y": 94},
+    "position":{"x":5, "y":219}
+}, 
+
+"p1_walk10":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":85, "y":219}
+}, 
+
+"p1_walk06":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":167, "y":219}
+}, 
+
+"p1_walk07":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":249, "y":219}
+}, 
+
+"p1_walk08":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":331, "y":219}
+}, 
+
+"p1_walk09":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":413, "y":219}
+}, 
+
+"p3_hurt":{
+    "size":{"x": 69,"y": 92},
+    "position":{"x":495, "y":219}
+}, 
+
+"p2_stand":{
+    "size":{"x": 66,"y": 92},
+    "position":{"x":495, "y":321}
+}, 
+
+"p1_walk11":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":5, "y":423}
+}, 
+
+"p2_duck":{
+    "size":{"x": 67,"y": 72},
+    "position":{"x":87, "y":423}
+}, 
+
+"p2_jump":{
+    "size":{"x": 66,"y": 94},
+    "position":{"x":164, "y":423}
+}, 
+
+"p2_hurt":{
+    "size":{"x": 67,"y": 92},
+    "position":{"x":240, "y":423}
+}, 
+
+"p2_front":{
+    "size":{"x": 66,"y": 92},
+    "position":{"x":317, "y":423}
+}, 
+
+"p3_walk01":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":393, "y":423}
+}, 
+
+"p2_walk07":{
+    "size":{"x": 70,"y": 94},
+    "position":{"x":475, "y":423}
+}, 
+
+"p2_walk03":{
+    "size":{"x": 70,"y": 94},
+    "position":{"x":555, "y":423}
+}, 
+
+"p2_walk01":{
+    "size":{"x": 70,"y": 94},
+    "position":{"x":87, "y":527}
+}, 
+
+"p2_walk02":{
+    "size":{"x": 70,"y": 94},
+    "position":{"x":167, "y":527}
+}, 
+
+"p3_walk04":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":247, "y":527}
+}, 
+
+"p3_duck":{
+    "size":{"x": 69,"y": 71},
+    "position":{"x":475, "y":527}
+}, 
+
+"p2_walk10":{
+    "size":{"x": 70,"y": 94},
+    "position":{"x":554, "y":527}
+}, 
+
+"p2_walk09":{
+    "size":{"x": 70,"y": 94},
+    "position":{"x":561, "y":5}
+}, 
+
+"p3_walk06":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":566, "y":109}
+}, 
+
+"p3_stand":{
+    "size":{"x": 66,"y": 92},
+    "position":{"x":574, "y":216}
+}, 
+
+"p3_jump":{
+    "size":{"x": 67,"y": 94},
+    "position":{"x":574, "y":318}
+}, 
+
+"p3_front":{
+    "size":{"x": 66,"y": 92},
+    "position":{"x":635, "y":422}
+}, 
+
+"p3_walk02":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":634, "y":527}
+}, 
+
+"p3_walk03":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":648, "y":5}
+}, 
+
+"p3_walk05":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":650, "y":112}
+}, 
+
+"p3_walk07":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":651, "y":219}
+}, 
+
+"p3_walk08":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":711, "y":326}
+}, 
+
+"p3_walk09":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":716, "y":433}
+}, 
+
+"p3_walk10":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":5, "y":540}
+}, 
+
+"p3_walk11":{
+    "size":{"x": 72,"y": 97},
+    "position":{"x":329, "y":540}
+}
+}

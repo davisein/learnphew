@@ -1,0 +1,296 @@
+{
+"flagYellow":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":5}
+}, 
+
+"bomb":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":5}
+}, 
+
+"flagYellow2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":165, "y":5}
+}, 
+
+"bush":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":245, "y":5}
+}, 
+
+"bombFlash":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":325, "y":5}
+}, 
+
+"gemBlue":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":405, "y":5}
+}, 
+
+"buttonGreen":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":485, "y":5}
+}, 
+
+"buttonBlue":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":85}
+}, 
+
+"buttonBlue_pressed":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":85}
+}, 
+
+"gemRed":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":165, "y":85}
+}, 
+
+"buttonYellow":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":245, "y":85}
+}, 
+
+"buttonGreen_pressed":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":325, "y":85}
+}, 
+
+"buttonRed":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":405, "y":85}
+}, 
+
+"buttonRed_pressed":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":485, "y":85}
+}, 
+
+"keyBlue":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":165}
+}, 
+
+"cloud2":{
+    "size":{"x": 129,"y": 71},
+    "position":{"x":85, "y":165}
+}, 
+
+"buttonYellow_pressed":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":224, "y":165}
+}, 
+
+"cactus":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":304, "y":165}
+}, 
+
+"chain":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":384, "y":165}
+}, 
+
+"cloud1":{
+    "size":{"x": 128,"y": 71},
+    "position":{"x":464, "y":165}
+}, 
+
+"keyYellow":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":246}
+}, 
+
+"flagBlue":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":246}
+}, 
+
+"cloud3":{
+    "size":{"x": 129,"y": 71},
+    "position":{"x":165, "y":246}
+}, 
+
+"coinBronze":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":304, "y":246}
+}, 
+
+"coinGold":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":384, "y":246}
+}, 
+
+"coinSilver":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":464, "y":246}
+}, 
+
+"fireball":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":326}
+}, 
+
+"particleBrick1b":{
+    "size":{"x": 21,"y": 21},
+    "position":{"x":565, "y":5}
+}, 
+
+"flagRed2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":326}
+}, 
+
+"flagRed":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":304, "y":326}
+}, 
+
+"flagGreenHanging":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":384, "y":326}
+}, 
+
+"flagBlue2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":464, "y":326}
+}, 
+
+"flagGreen2":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":406}
+}, 
+
+"flagBlueHanging":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":406}
+}, 
+
+"flagGreen":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":165, "y":406}
+}, 
+
+"plantPurple":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":245, "y":406}
+}, 
+
+"gemYellow":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":325, "y":406}
+}, 
+
+"gemGreen":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":405, "y":406}
+}, 
+
+"flagRedHanging":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":485, "y":406}
+}, 
+
+"flagYellowHanging":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":5, "y":486}
+}, 
+
+"snowhill":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":85, "y":486}
+}, 
+
+"mushroomBrown":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":165, "y":486}
+}, 
+
+"keyGreen":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":245, "y":486}
+}, 
+
+"keyRed":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":325, "y":486}
+}, 
+
+"springboardDown":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":405, "y":486}
+}, 
+
+"particleBrick2a":{
+    "size":{"x": 19,"y": 14},
+    "position":{"x":565, "y":36}
+}, 
+
+"mushroomRed":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":485, "y":486}
+}, 
+
+"particleBrick1a":{
+    "size":{"x": 19,"y": 14},
+    "position":{"x":565, "y":60}
+}, 
+
+"star":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":596, "y":5}
+}, 
+
+"rock":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":565, "y":85}
+}, 
+
+"plant":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":602, "y":165}
+}, 
+
+"particleBrick2b":{
+    "size":{"x": 21,"y": 21},
+    "position":{"x":645, "y":85}
+}, 
+
+"spikes":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":602, "y":245}
+}, 
+
+"springboardUp":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":544, "y":325}
+}, 
+
+"switchLeft":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":565, "y":405}
+}, 
+
+"switchMid":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":565, "y":485}
+}, 
+
+"switchRight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":565, "y":565}
+}, 
+
+"weight":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":676, "y":5}
+}, 
+
+"weightChained":{
+    "size":{"x": 70,"y": 70},
+    "position":{"x":676, "y":85}
+}
+}

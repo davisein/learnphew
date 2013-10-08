@@ -1,0 +1,2 @@
+Platformer and puzzle spritesheets under cc0 license - created by kenney.nl
+balls spritesheet under GPL created by Smileymensch

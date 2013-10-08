@@ -2,7 +2,6 @@ app = require('derby').createApp(module)
   .use(require 'derby-ui-boot')
   .use(require '../../ui/index.coffee')
 
-
 # ROUTES #
 
 # Derby routes are rendered on the client and the server
@@ -34,7 +33,6 @@ app.get '/editor', (page, model) ->
   page.render 'editor'
 app.ready  (model) ->
   model.subscribe "code", ->
-    console.log model.get()
   window.editor = CodeMirror.fromTextArea document.getElementById "code",
     mode: "coffeescript"
     styleActiveLine: true
@@ -49,9 +47,7 @@ app.ready  (model) ->
     #console.log model.get()
     model.set "code.now.code", window.editor.getValue()
   model.on "change", "code.now.code", (captures, value) ->
-    window.editor.setValue value if value isnt window.editor.getValue()
-  console.log model.get()
-
+    window.editor.setValue captures if captures isnt window.editor.getValue()
 
 # CONTROLLER FUNCTIONS #
 
@@ -77,8 +73,14 @@ app.setupnrun = (model)->
   $("#ide").css "opacity", "0.5"
   roo1 = muu.addCanvas "canvas1", false
   roo2 = muu.addCanvas "canvas2", true
-  muu.addAtlas "img/atlas2.png", "img/atlas2.js"
-  mask = roo1:roo1, roo2:roo2
+  mask = app.boilerplate()
+  muu.addAtlas "img/balls.png", "img/balls.json"
+  muu.addAtlas "img/platformer-character.png", "img/platformer-character.json"
+  muu.addAtlas "img/platformer-hud.png", "img/platformer-hud.json"
+  muu.addAtlas "img/platformer-items.png", "img/platformer-items.json"
+  muu.addAtlas "img/platformer-tiles.png", "img/platformer-tiles.json"
+  muu.addAtlas "img/puzzle.png", "img/puzzle.json"
+
   app.stopp = false
   render = (t)->
     if !app.stopp
@@ -90,6 +92,10 @@ app.setupnrun = (model)->
       requestAnimationFrame render
 
   muu.whenReady ->
+    mask = app.boilerplate()
+    mask.roo1 = roo1
+    mask.roo2 = roo2
+
     code = "with(this){"
     code += CoffeeScript.compile editor.getValue(), bare: true
     code += "}"
@@ -105,3 +111,139 @@ app.stop = (model)->
   $(".canv").css "opacity", "0.5"
   $(".canv").css "z-index", "0"
   $("#ide").css "opacity", "1"
+
+app.boilerplate = ->
+  mask =
+    rand: (start, end) ->
+      if end?
+        return start + Math.random()*(end-start)
+      else if start?
+        return Math.random()*start
+      else
+        return Math.random()
+    randInt: (start, end) ->
+      return Math.round @rand start, end
+    arrow: (end, color) ->
+      line = new Polygon [new v2, end]
+      triangle = new Polygon [
+        new v2(10,0), new v2(0,10), new v2(-10,0)
+      ]
+      triangle.moveTo end
+      triangle.rotation -.5*Math.PI + Math.atan2 end.y, end.x
+      line.stroke color
+      triangle.fill color
+      triangle.stroke "rgba(0,0,0,0)"
+      arr = new Layer().add(line).add triangle
+      mask.roo2.add arr
+      arr.to = (end) ->
+        mask.roo2.rem arr
+        a = mask.arrow end, color
+        a
+      arr
+    p1: new Actor
+      def:
+        sprite0: muu.getSprite('p1_stand')
+        len: 1
+        dt: 50
+      walk:
+        sprite0: muu.getSprite('p1_walk01')
+        sprite1: muu.getSprite('p1_walk02')
+        sprite2: muu.getSprite('p1_walk03')
+        sprite3: muu.getSprite('p1_walk04')
+        sprite4: muu.getSprite('p1_walk05')
+        sprite5: muu.getSprite('p1_walk06')
+        sprite6: muu.getSprite('p1_walk07')
+        sprite7: muu.getSprite('p1_walk08')
+        sprite8: muu.getSprite('p1_walk09')
+        sprite9: muu.getSprite('p1_walk10')
+        sprite10: muu.getSprite('p1_walk11')
+        len: 10
+        dt: 50
+      jump:
+        sprite0:muu.getSprite('p1_jump')
+        len: 1
+        dt: 50
+      hurt:
+        sprite0:muu.getSprite('p1_hurt')
+        len: 1
+        dt: 50
+      duck:
+        sprite0:muu.getSprite('p1_duck')
+        len:1
+        dt: 50
+      front:
+        sprite0: muu.getSprite('p1_front')
+        len: 1
+        dt: 50
+    p2: new Actor
+      def:
+        sprite0: muu.getSprite('p2_stand')
+        len: 1
+        dt: 50
+      walk:
+        sprite0: muu.getSprite('p2_walk01')
+        sprite1: muu.getSprite('p2_walk02')
+        sprite2: muu.getSprite('p2_walk03')
+        sprite3: muu.getSprite('p2_walk04')
+        sprite4: muu.getSprite('p2_walk05')
+        sprite5: muu.getSprite('p2_walk06')
+        sprite6: muu.getSprite('p2_walk07')
+        sprite7: muu.getSprite('p2_walk08')
+        sprite8: muu.getSprite('p2_walk09')
+        sprite9: muu.getSprite('p2_walk10')
+        sprite10: muu.getSprite('p2_walk11')
+        len: 10
+        dt: 50
+      jump:
+        sprite0:muu.getSprite('p2_jump')
+        len: 1
+        dt: 50
+      hurt:
+        sprite0:muu.getSprite('p2_hurt')
+        len: 1
+        dt: 50
+      duck:
+        sprite0:muu.getSprite('p2_duck')
+        len:1
+        dt: 50
+      front:
+        sprite0: muu.getSprite('p2_front')
+        len: 1
+        dt: 50
+
+    p3: new Actor
+      def:
+        sprite0: muu.getSprite('p3_stand')
+        len: 1
+        dt: 50
+      walk:
+        sprite0: muu.getSprite('p3_walk01')
+        sprite1: muu.getSprite('p3_walk02')
+        sprite2: muu.getSprite('p3_walk03')
+        sprite3: muu.getSprite('p3_walk04')
+        sprite4: muu.getSprite('p3_walk05')
+        sprite5: muu.getSprite('p3_walk06')
+        sprite6: muu.getSprite('p3_walk07')
+        sprite7: muu.getSprite('p3_walk08')
+        sprite8: muu.getSprite('p3_walk09')
+        sprite9: muu.getSprite('p3_walk10')
+        sprite10: muu.getSprite('p3_walk11')
+        len: 10
+        dt: 50
+      jump:
+        sprite0:muu.getSprite('p3_jump')
+        len: 1
+        dt: 50
+      hurt:
+        sprite0:muu.getSprite('p3_hurt')
+        len: 1
+        dt: 50
+      duck:
+        sprite0:muu.getSprite('p3_duck')
+        len:1
+        dt: 50
+      front:
+        sprite0: muu.getSprite('p3_front')
+        len: 1
+        dt: 50
+

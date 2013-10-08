@@ -1,0 +1,391 @@
+{
+"element_grey_diamond_glossy":{
+    "size":{"x": 48,"y": 48},
+    "position":{"x":5, "y":5}
+}, 
+
+"ballBlue":{
+    "size":{"x": 22,"y": 22},
+    "position":{"x":63, "y":5}
+}, 
+
+"element_grey_polygon":{
+    "size":{"x": 48,"y": 46},
+    "position":{"x":95, "y":5}
+}, 
+
+"buttonDefault":{
+    "size":{"x": 190,"y": 49},
+    "position":{"x":153, "y":5}
+}, 
+
+"ballGrey":{
+    "size":{"x": 22,"y": 22},
+    "position":{"x":353, "y":5}
+}, 
+
+"element_grey_polygon_glossy":{
+    "size":{"x": 48,"y": 46},
+    "position":{"x":353, "y":37}
+}, 
+
+"buttonDefault_bottomright":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":385, "y":5}
+}, 
+
+"buttonDefault_bottom":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":407, "y":5}
+}, 
+
+"buttonDefault_bottomleft":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":411, "y":27}
+}, 
+
+"element_grey_rectangle_glossy":{
+    "size":{"x": 64,"y": 32},
+    "position":{"x":5, "y":93}
+}, 
+
+"buttonDefault_top":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":63, "y":49}
+}, 
+
+"buttonDefault_left":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":411, "y":49}
+}, 
+
+"buttonDefault_mid":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":5, "y":71}
+}, 
+
+"buttonDefault_right":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":27, "y":71}
+}, 
+
+"element_purple_cube_glossy":{
+    "size":{"x": 32,"y": 32},
+    "position":{"x":79, "y":93}
+}, 
+
+"buttonSelected_bottomleft":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":49, "y":71}
+}, 
+
+"buttonDefault_topleft":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":71, "y":71}
+}, 
+
+"buttonDefault_topright":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":93, "y":71}
+}, 
+
+"buttonSelected":{
+    "size":{"x": 190,"y": 49},
+    "position":{"x":121, "y":64}
+}, 
+
+"buttonSelected_bottom":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":321, "y":71}
+}, 
+
+"element_purple_polygon":{
+    "size":{"x": 48,"y": 46},
+    "position":{"x":321, "y":93}
+}, 
+
+"buttonSelected_topleft":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":411, "y":71}
+}, 
+
+"buttonSelected_bottomright":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":379, "y":93}
+}, 
+
+"buttonSelected_left":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":401, "y":93}
+}, 
+
+"buttonSelected_mid":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":379, "y":115}
+}, 
+
+"buttonSelected_right":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":401, "y":115}
+}, 
+
+"buttonSelected_top":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":5, "y":137}
+}, 
+
+"element_purple_rectangle_glossy":{
+    "size":{"x": 64,"y": 32},
+    "position":{"x":27, "y":137}
+}, 
+
+"element_blue_rectangle_glossy":{
+    "size":{"x": 64,"y": 32},
+    "position":{"x":101, "y":137}
+}, 
+
+"buttonSelected_topright":{
+    "size":{"x": 12,"y": 12},
+    "position":{"x":175, "y":137}
+}, 
+
+"element_blue_diamond":{
+    "size":{"x": 48,"y": 48},
+    "position":{"x":197, "y":137}
+}, 
+
+"element_blue_diamond_glossy":{
+    "size":{"x": 48,"y": 48},
+    "position":{"x":255, "y":137}
+}, 
+
+"element_blue_polygon":{
+    "size":{"x": 48,"y": 46},
+    "position":{"x":379, "y":137}
+}, 
+
+"element_blue_polygon_glossy":{
+    "size":{"x": 48,"y": 46},
+    "position":{"x":5, "y":193}
+}, 
+
+"element_blue_rectangle":{
+    "size":{"x": 64,"y": 32},
+    "position":{"x":63, "y":193}
+}, 
+
+"element_red_polygon":{
+    "size":{"x": 48,"y": 46},
+    "position":{"x":137, "y":193}
+}, 
+
+"element_green_rectangle_glossy":{
+    "size":{"x": 64,"y": 32},
+    "position":{"x":313, "y":193}
+}, 
+
+"element_blue_square":{
+    "size":{"x": 32,"y": 32},
+    "position":{"x":387, "y":193}
+}, 
+
+"element_blue_square_glossy":{
+    "size":{"x": 32,"y": 32},
+    "position":{"x":63, "y":235}
+}, 
+
+"element_green_rectangle":{
+    "size":{"x": 64,"y": 32},
+    "position":{"x":195, "y":235}
+}, 
+
+"element_green_polygon_glossy":{
+    "size":{"x": 48,"y": 46},
+    "position":{"x":269, "y":235}
+}, 
+
+"element_green_polygon":{
+    "size":{"x": 48,"y": 46},
+    "position":{"x":327, "y":235}
+}, 
+
+"element_green_diamond":{
+    "size":{"x": 48,"y": 48},
+    "position":{"x":5, "y":291}
+}, 
+
+"element_green_diamond_glossy":{
+    "size":{"x": 48,"y": 48},
+    "position":{"x":63, "y":291}
+}, 
+
+"element_red_square_glossy":{
+    "size":{"x": 32,"y": 32},
+    "position":{"x":385, "y":235}
+}, 
+
+"element_grey_square":{
+    "size":{"x": 32,"y": 32},
+    "position":{"x":121, "y":277}
+}, 
+
+"element_grey_rectangle":{
+    "size":{"x": 64,"y": 32},
+    "position":{"x":163, "y":291}
+}, 
+
+"element_green_square":{
+    "size":{"x": 32,"y": 32},
+    "position":{"x":385, "y":277}
+}, 
+
+"element_green_square_glossy":{
+    "size":{"x": 32,"y": 32},
+    "position":{"x":121, "y":319}
+}, 
+
+"element_grey_diamond":{
+    "size":{"x": 48,"y": 48},
+    "position":{"x":237, "y":291}
+}, 
+
+"element_yellow_polygon":{
+    "size":{"x": 48,"y": 46},
+    "position":{"x":295, "y":291}
+}, 
+
+"element_purple_polygon_glossy":{
+    "size":{"x": 48,"y": 46},
+    "position":{"x":353, "y":319}
+}, 
+
+"element_purple_diamond_glossy":{
+    "size":{"x": 48,"y": 48},
+    "position":{"x":5, "y":375}
+}, 
+
+"element_grey_square_glossy":{
+    "size":{"x": 32,"y": 32},
+    "position":{"x":63, "y":375}
+}, 
+
+"element_purple_diamond":{
+    "size":{"x": 48,"y": 48},
+    "position":{"x":105, "y":375}
+}, 
+
+"element_yellow_rectangle":{
+    "size":{"x": 64,"y": 32},
+    "position":{"x":163, "y":375}
+}, 
+
+"element_red_diamond_glossy":{
+    "size":{"x": 48,"y": 48},
+    "position":{"x":237, "y":375}
+}, 
+
+"element_red_diamond":{
+    "size":{"x": 48,"y": 48},
+    "position":{"x":295, "y":375}
+}, 
+
+"element_purple_rectangle":{
+    "size":{"x": 64,"y": 32},
+    "position":{"x":353, "y":375}
+}, 
+
+"element_purple_square":{
+    "size":{"x": 32,"y": 32},
+    "position":{"x":433, "y":5}
+}, 
+
+"element_yellow_square_glossy":{
+    "size":{"x": 32,"y": 32},
+    "position":{"x":433, "y":47}
+}, 
+
+"element_red_square":{
+    "size":{"x": 32,"y": 32},
+    "position":{"x":433, "y":89}
+}, 
+
+"element_red_rectangle_glossy":{
+    "size":{"x": 64,"y": 32},
+    "position":{"x":163, "y":417}
+}, 
+
+"element_red_polygon_glossy":{
+    "size":{"x": 48,"y": 46},
+    "position":{"x":411, "y":319}
+}, 
+
+"element_red_rectangle":{
+    "size":{"x": 64,"y": 32},
+    "position":{"x":353, "y":417}
+}, 
+
+"paddleRed":{
+    "size":{"x": 104,"y": 24},
+    "position":{"x":475, "y":5}
+}, 
+
+"element_yellow_polygon_glossy":{
+    "size":{"x": 48,"y": 46},
+    "position":{"x":475, "y":39}
+}, 
+
+"element_yellow_diamond_glossy":{
+    "size":{"x": 48,"y": 48},
+    "position":{"x":533, "y":39}
+}, 
+
+"element_yellow_diamond":{
+    "size":{"x": 48,"y": 48},
+    "position":{"x":475, "y":97}
+}, 
+
+"element_yellow_rectangle_glossy":{
+    "size":{"x": 64,"y": 32},
+    "position":{"x":437, "y":155}
+}, 
+
+"element_yellow_square":{
+    "size":{"x": 32,"y": 32},
+    "position":{"x":533, "y":97}
+}, 
+
+"paddleBlu":{
+    "size":{"x": 104,"y": 24},
+    "position":{"x":195, "y":197}
+}, 
+
+"particleCartoonStar":{
+    "size":{"x": 10,"y": 10},
+    "position":{"x":575, "y":97}
+}, 
+
+"particleSmallStar":{
+    "size":{"x": 10,"y": 10},
+    "position":{"x":575, "y":117}
+}, 
+
+"particleStar":{
+    "size":{"x": 20,"y": 21},
+    "position":{"x":533, "y":139}
+}, 
+
+"selectorA":{
+    "size":{"x": 38,"y": 38},
+    "position":{"x":511, "y":170}
+}, 
+
+"selectorB":{
+    "size":{"x": 38,"y": 38},
+    "position":{"x":429, "y":218}
+}, 
+
+"selectorC":{
+    "size":{"x": 32,"y": 32},
+    "position":{"x":477, "y":218}
+}
+}
