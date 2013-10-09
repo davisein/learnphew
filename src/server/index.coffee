@@ -26,7 +26,7 @@ redis.select process.env.REDIS_DB || 1
 # Get Mongo configuration 
 mongoUrl = process.env.MONGO_URL || process.env.MONGOHQ_URL ||
   'mongodb://localhost:27017/project'
-mongo = mongoskin.db "#{mongoUrl}?auto_reconnect", {safe: true}
+mongo = mongoskin.db "#{mongoUrl}?auto_reconnect=true", {safe: true}
 
 # The store creates models and syncs data
 store = derby.createStore

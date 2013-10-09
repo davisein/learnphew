@@ -45,9 +45,9 @@ app.get '/worlds', (page, model, params, next) ->
   # Create a scoped model, which sets the base path for all model methods
   user = model.at 'users.' + userId
 
-  # Create a mongo query that gets the current user's items
-  myWorldsQuery = model.query 'world', {userId}
-  otherWorldsQuery = model.query 'world', {'*', $limit: 50}
+  # Create a mongo query that gets the current user's worlds
+  myWorldsQuery = model.query 'worlds', {userId}
+  otherWorldsQuery = model.query 'worlds', {'*', $limit: 50}
 
   # Get the inital data and subscribe to any updates
   model.subscribe user, myWorldsQuery, (err) ->
@@ -59,10 +59,15 @@ app.get '/worlds', (page, model, params, next) ->
         otherWorldsQuery.ref '_page.other_worlds'
         page.render 'worlds'
 
+app.get '/world/:id', (page, model, params, next) ->
+  world = model.get ':id'
+  model.set '_session.world', world
+  page.redirect '/editor'
 
 app.get '/editor', (page, model) ->
+  model.set '_page.world', '_session.world'
   page.render 'editor'
-app.ready  (model) ->
+app.enter '/editor',  (model) ->
   model.subscribe "code", ->
   window.editor = CodeMirror.fromTextArea document.getElementById "code",
     mode: "coffeescript"
@@ -72,25 +77,29 @@ app.ready  (model) ->
     height: "600px"
   #model.set '_page.editor', window.editor
   window.editor.setSize "800px", "600px"
-  window.editor.on "change", (instance, chang) ->
+  #window.editor.on "change", (instance, chang) ->
     #model.stringRemove "code.now.code", chang.from, chang.to
     #model.stringInsert "code.now.code", chang.from, chang.text
     #console.log model.get()
-    model.set "code.now.code", window.editor.getValue()
-  model.on "change", "code.now.code", (captures, value) ->
-    window.editor.setValue captures if captures isnt window.editor.getValue()
+    #model.set "", window.editor.getValue()
+  #model.on "change", "code.now.code", (captures, value) ->
+    #window.editor.setValue captures if captures isnt window.editor.getValue()
 
 # CONTROLLER FUNCTIONS #
 app.fn 'world.add', (e, el) ->
-  newWorld = @model.del '_page.newworld'
-  return unless newworld
-  newWorld.userId = @model.get '_session.userId'
-  @model.add 'items', newWorld
+  world = @model.del '_page.world'
+  return unless world
+  console.log "I execute"
+  world.code = window.editor.getValue()
+  world.userId = @model.get '_session.userId'
+  @model.add 'worlds', world
 
 app.fn 'world.remove', (e) ->
   world = e.get ':world'
-  @model.del 'world.' + world.id
+  @model.del 'worlds.' + world.id
 
+app.fn 'app.click', (e) ->
+    app.click() if app.click
 
 app.fn 'list.add', (e, el) ->
   newItem = @model.del '_page.newItem'
@@ -111,7 +120,7 @@ app.setupnrun = (model)->
   $("#runbutton").addClass "glyphicon-stop"
   $(".canv").css "opacity", "1"
   $(".canv").css "z-index", "1"
-  $("#ide").css "opacity", "0.5"
+  $("#ide").css "opacity", "0.2"
   roo1 = muu.addCanvas "canvas1", false
   roo2 = muu.addCanvas "canvas2", true
   mask = app.boilerplate()
@@ -129,6 +138,7 @@ app.setupnrun = (model)->
         app.lt = t
         app.first = false
       mask.render t-app.lt
+      app.click = mask.click
       muu.render()
       requestAnimationFrame render
 
@@ -138,7 +148,7 @@ app.setupnrun = (model)->
     mask.roo2 = roo2
 
     code = "with(this){"
-    code += CoffeeScript.compile editor.getValue(), bare: true
+    code += CoffeeScript.compile window.editor.getValue(), bare: true
     code += "}"
     (new Function code).call mask
     app.first = true
@@ -149,7 +159,7 @@ app.stop = (model)->
   app.stopp = true
   $("#runbutton").removeClass "glyphicon-stop"
   $("#runbutton").addClass "glyphicon-play-circle"
-  $(".canv").css "opacity", "0.5"
+  $(".canv").css "opacity", "0.2"
   $(".canv").css "z-index", "0"
   $("#ide").css "opacity", "1"
 

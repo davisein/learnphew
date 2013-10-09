@@ -6,15 +6,13 @@
         <thead>
           <tr>
             <th>World</th>
-            <th>Description</th>
           </tr>
         </thead>
         <tbody>
           {#each _page.worlds as :world}
             <tr>
-              <td>{{:world.name}}</td>
-              <td>{{:world.note}}</td>
-              <td><button class="btn" x-bind="click: list.remove">Remove</button></td>
+              <td><a href="world/{world.id}">{{:world.name}}</a></td>
+              <td><button class="btn" x-bind="click: world.remove">Remove</button></td>
             </tr>
           {/}
         </tbody>
@@ -26,15 +24,14 @@
         <thead>
           <tr>
             <th>World</th>
-            <th>Description</th>
           </tr>
         </thead>
         <tbody>
           {#each _page.other_worlds as :world}
             <tr>
+              <td><a href="world/{world.id}">{{:world.name}}</a></td>
               <td>{{:world.name}}</td>
-              <td>{{:world.note}}</td>
-              <td><button class="btn" x-bind="click: list.remove">Remove</button></td>
+              <td><button class="btn" x-bind="click: world.remove">Remove</button></td>
             </tr>
           {/}
         </tbody>

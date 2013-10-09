@@ -1,11 +1,12 @@
 {
   "name": "learnphew",
   "description": "",
-  "version": "0.0.0",
+  "version": "0.0.0-1",
   "repository": {
     "type": "git",
     "url": ""
   },
+  "subdomain": "learnphew",
   "scripts": {
     "start": "./node_modules/coffee-script/bin/coffee server.coffee"
   },
