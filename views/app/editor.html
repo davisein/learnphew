@@ -1,15 +1,24 @@
 <Body:>
         <div class="container">
-            <form x-bind="submit: world.add">
-            <fieldset>
-                <label>Name</label>
-                <input type="text" value={_page.world.name}>
-                <div>
-                  <button type="submit" class="btn">Add</button>
-                </div>
+            <!--<form x-bind="submit: world.add">-->
+            <!--<fieldset>-->
+                <!--<label>Name</label>-->
+                <!--<input type="text" value={_page.world.name}>-->
+                <!--<div>-->
+                  <!--<button type="submit" class="btn btn-right">Add</button>-->
+                <!--</div>-->
+            <p> Try some of our examples like: </p>
+            <div class="btn-group">
+              <button type="button" x-bind="click: editor.ej1" class="btn btn-default">Ejp 1</button>
+              <button type="button" x-bind="click: editor.ej2" class="btn btn-default">Middle</button>
+              <button type="button" x-bind="click: editor.ej3" class="btn btn-default">Right</button>
+            </div>
+            <button type="button" id="run" x-bind="click: editor.run" class="btn btn-primary">
+                <span id="runbutton" class="glyphicon glyphicon-play-circle"> Run
+            </button>
 
-            <canvas id="canvas1" class="canv" width=800 height=600 style="position:absolute; z-index:10" x-bind="click:app.click"></canvas>
-            <canvas id="canvas2" class="canv" width=800 height=600 style="position:absolute; z-index:11" x-bind="click:app.click"></canvas>
+            <canvas id="canvas1" class="canv" width=800 height=600 style="position:absolute; z-index:0" x-bind="click:app.click"></canvas>
+            <canvas id="canvas2" class="canv" width=800 height=600 style="position:absolute; z-index:0" x-bind="click:app.click"></canvas>
 
             <div id="ide" style="z-index:0">
                 <textarea id="code">

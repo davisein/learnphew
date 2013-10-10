@@ -11,7 +11,7 @@
         <tbody>
           {#each _page.worlds as :world}
             <tr>
-              <td><a href="world/{world.id}">{{:world.name}}</a></td>
+                <td><a href="editor/{{:world.name}}">{{:world.name}}</a></td>
               <td><button class="btn" x-bind="click: world.remove">Remove</button></td>
             </tr>
           {/}

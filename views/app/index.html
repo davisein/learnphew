@@ -37,15 +37,12 @@
     <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
             <app:navLink title="Home" href="/">
-            <app:navLink title="Worlds" href="/worlds">
+            <!--<app:navLink title="Worlds" href="/worlds">-->
             <app:navLink title="Editor" href="/editor">
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            {{#if equal($url, '/editor')}}
-                    <button type="button" id="run" x-bind="click: editor.run" class="btn btn-default navbar-btn">
-                        <span id="runbutton" class="glyphicon glyphicon-play-circle">
-                    </button>
-            {{/}}
+            <!--{{#if equal($url, '/editor')}}-->
+            <!--{{/}}-->
             {{#if _session.loggedIn}}
                 <app:navLink title="Logout" href="/logout" class="pull-right">
             {{else}}

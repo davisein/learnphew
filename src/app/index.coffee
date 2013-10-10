@@ -59,14 +59,11 @@ app.get '/worlds', (page, model, params, next) ->
         otherWorldsQuery.ref '_page.other_worlds'
         page.render 'worlds'
 
-app.get '/world/:id', (page, model, params, next) ->
-  world = model.get ':id'
-  model.set '_session.world', world
-  page.redirect '/editor'
-
 app.get '/editor', (page, model) ->
-  model.set '_page.world', '_session.world'
+  #world = model.get '_phew.world'
+  #model.set '_page.world', world
   page.render 'editor'
+
 app.enter '/editor',  (model) ->
   model.subscribe "code", ->
   window.editor = CodeMirror.fromTextArea document.getElementById "code",
@@ -85,11 +82,42 @@ app.enter '/editor',  (model) ->
   #model.on "change", "code.now.code", (captures, value) ->
     #window.editor.setValue captures if captures isnt window.editor.getValue()
 
+app.get '/editor/:worldName', (page, model, {worldName}, next) ->
+  world = model.at "worlds.#{worldName}"
+  world.subscribe (err) ->
+    return next err if err
+    #world = model.get '_phew.world'
+    model.set '_page.world', world
+    page.render 'editor'
+
+app.enter '/editor/:worldName',  (model, {worldName}) ->
+  #model.subscribe "worlds.#{worldName}", ->
+  window.editor = CodeMirror.fromTextArea document.getElementById "code",
+    mode: "coffeescript"
+    styleActiveLine: true
+    lineNumbers: true
+    lineWrapping: true
+    height: "600px"
+  window.editor.setSize "800px", "600px"
+  #window.editor.on "change", (instance, chang) ->
+    #model.stringRemove "code.now.code", chang.from, chang.to
+    #model.stringInsert "code.now.code", chang.from, chang.text
+    #console.log model.get()
+    #model.set "", window.editor.getValue()
+  #model.on "change", "code.now.code", (captures, value) ->
+    #window.editor.setValue captures if captures isnt window.editor.getValue()
+
 # CONTROLLER FUNCTIONS #
+app.fn 'editor.ej1', ->
+    window.editor.setValue "1"
+app.fn 'editor.ej2', ->
+    window.editor.setValue "2"
+app.fn 'editor.ej3', ->
+    window.editor.setValue "4"
+
 app.fn 'world.add', (e, el) ->
   world = @model.del '_page.world'
   return unless world
-  console.log "I execute"
   world.code = window.editor.getValue()
   world.userId = @model.get '_session.userId'
   @model.add 'worlds', world
@@ -114,6 +142,15 @@ app.fn 'list.remove', (e) ->
 app.fn 'editor.run', (model)->
   app.onrun = !app.onrun
   if app.onrun then app.setupnrun() else app.stop()
+
+#app.fn 'world.go', (e)->
+  #world = e.get ':world'
+  #@model.set '_session.world', world
+  ##world_session = @model.at '_session.world'
+  ##world_session.at 'name', world.name
+  ##world_session.at 'code', world.code
+  ##app.render 'editor', {world: world}
+
 
 app.setupnrun = (model)->
   $("#runbutton").removeClass "glyphicon-play-circle"
